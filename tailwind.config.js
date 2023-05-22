@@ -6,13 +6,26 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    maxWidth: {
+      '250': '250px',
+      '300': '300px',
+      '370': '370px',
+      '500': '500px',
+      '600': '600px',
+    },
+    minHeight: {
+      '300': '300px',
+      '400': '400px',
+    },
+    maxHeight: {
+      '500': '500px',
+      '700': '700px',
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+
     },
   },
-  plugins: [],
-}
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
+};
