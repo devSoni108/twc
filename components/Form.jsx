@@ -4,6 +4,7 @@ const ContactForm = () => {
     <div className="bg-stone-950 px-4 sm:px-56 pb-16">
       <div className="rounded-lg isolate bg-white p-8">
         <form name='contact' method="post" data-netlify='true' className="mx-auto max-w-xl">
+          <input type="hidden" name="form-name" value="contact" />
           <div className="sm:col-span-2">
             <div>
               <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-900">
