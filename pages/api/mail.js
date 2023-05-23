@@ -14,7 +14,7 @@ export default async (req, res) => {
     `;
 
     const data = {
-      to: 'noreply@gtccomponents.co.za',
+      to: ['noreply@gtccomponents.co.za', 'gtcafrica1@gmail.com', 'soni@cherrypopmedia.co.za'],
       from: 'noreply@gtccomponents.co.za',
       subject: 'New web form message',
       text: emailMessage,

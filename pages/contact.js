@@ -30,8 +30,9 @@ const Contact = () => {
         <h2 className="text-3xl">We will call you back.</h2>
         <h3 className="text-xl py-2">Complete the form below and we will contact you.</h3>
       </section>
-
-      <Form/>
+      <section>
+        <Form/>
+      </section>
 
       {/* Contact Details */}
       <section className="px-4 py-8 text-center">
