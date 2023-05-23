@@ -1,6 +1,6 @@
 const mail = require('@sendgrid/mail');
 
-export default async (req, res) => {
+const sendMail = async (req, res) => {
   try {
     const { name, email, phoneNumber, message } = JSON.parse(req.body);
 
@@ -29,3 +29,5 @@ export default async (req, res) => {
     res.status(500).json({ error: 'An error occurred while sending the email' });
   }
 };
+
+export default sendMail

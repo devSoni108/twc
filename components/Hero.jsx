@@ -1,18 +1,11 @@
 import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { staggerContainer, textVariant } from '@/utils/motion'
 
 import Header from '../assets/hero.jpg'
 
 const Hero = () => {
     return (
         <section>
-            <motion.div
-                variants={staggerContainer}
-                initial="hidden"
-                whileInView='show'
-                viewport={{once: false, amount: 0.25 }}
-                style={{position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <div style={{position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                 <Image
                     src={Header}
                     alt='Heavy vehicle excavators'
@@ -41,12 +34,8 @@ const Hero = () => {
                     color: 'white',
                 }}>
                     <div className='px-4 sm:px-8'>
-                        <motion.h1
-                            variants={textVariant(1.1)}
-                            className='pt-4 text-4xl font-semibold md:text-5xl max-w-500'>Unleashing the <span className='text-yellow-500'>Power</span> of your Machinery</motion.h1>
-                        <motion.h2
-                            variants={textVariant(1.2)}
-                            className='py-6 text-sm md:text-xl  sm:max-w-600 '>Experience the full potential of your earth moving equipment with our engineering and mechanical services.</motion.h2>
+                        <h1 className='pt-4 text-4xl font-semibold md:text-5xl max-w-500'>Unleashing the <span className='text-yellow-500'>Power</span> of your Machinery</h1>
+                        <h2 className='py-6 text-sm md:text-xl  sm:max-w-600 '>Experience the full potential of your earth moving equipment with our engineering and mechanical services.</h2>
                         <div className='block sm:flex'>
                             <div className='pr-2 pt-2'>
                                 <button className='px-2 py-1 text-xs text-stone-950 bg-amber-300 font-semibold rounded border border-amber-200 hover:text-amber-300 hover:bg-stone-800 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-stone-800 focus:ring-offset-2 uppercase md:px-4 md:py-2'>Our Solutions</button>
@@ -57,7 +46,7 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </section>
     )
 }

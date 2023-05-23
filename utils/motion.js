@@ -1,4 +1,4 @@
-const staggerContainer = (staggerChildren, delayChildren) => ({
+export const staggerContainer = (staggerChildren, delayChildren) => ({
     hidden: {},
     show: {
       transition: {
@@ -8,7 +8,6 @@ const staggerContainer = (staggerChildren, delayChildren) => ({
     },
   });  
 
-export default staggerContainer
 
 export const textVariant = (delay) => ({
     hidden: {
