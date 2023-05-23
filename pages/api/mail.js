@@ -1,27 +1,31 @@
 const mail = require('@sendgrid/mail');
-console.log(process.env.SENDGRID_API_KEY);
 
-mail.setApiKey(process.env.SENDGRID_API_KEY);
+export default async (req, res) => {
+  try {
+    const { name, email, phoneNumber, message } = JSON.parse(req.body);
 
-export default (req, res) => {
-  const body = JSON.parse(req.body);
+    mail.setApiKey(process.env.SENDGRID_API_KEY);
 
-  const message = `
-    Name: ${body.name}\r\n
-    Email: ${body.email}\r\n
-    Phone number: ${body.phoneNumber}\r\n
-    Message: ${body.message}
-  `;
+    const emailMessage = `
+      Name: ${name}\r\n
+      Email: ${email}\r\n
+      Phone number: ${phoneNumber}\r\n
+      Message: ${message}
+    `;
 
-  const data = {
-    to: 'noreply@gtccomponents.co.za',
-    from: 'noreply@gtccomponents.co.za',
-    subject: 'New web form message',
-    text: message,
-    html: message.replace(/\r\n/g, '<br>')
+    const data = {
+      to: 'noreply@gtccomponents.co.za',
+      from: 'noreply@gtccomponents.co.za',
+      subject: 'New web form message',
+      text: emailMessage,
+      html: emailMessage.replace(/\r\n/g, '<br>'),
+    };
+
+    await mail.send(data);
+
+    res.status(200).json({ status: 'Ok' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'An error occurred while sending the email' });
   }
-
-  mail.send(data);
-
-  res.status(200).json({ status: 'Ok' });
 };

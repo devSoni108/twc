@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { stringify } from 'querystring';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -9,23 +8,39 @@ const ContactForm = () => {
 
   async function handleOnSubmit(e) {
     e.preventDefault();
-  
-    const formData = {};
-  
-    Array.from(e.currentTarget.elements).forEach((field) => {
-      if (!field.name) return;
-      formData[field.name] = field.value;
-    });
-    fetch('/api/mail', {
-      method: 'post',
-      body: JSON.stringify(formData)
-    })
-  }  
+
+    const formData = {
+      name,
+      email,
+      phoneNumber,
+      message,
+    };
+
+    try {
+      const response = await fetch('/api/mail', {
+        method: 'post',
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
+
+      // Reset form fields
+      setName('');
+      setEmail('');
+      setPhoneNumber('');
+      setMessage('');
+    } catch (error) {
+      // Handle error
+      console.error(error);
+    }
+  }
 
   return (
     <div className="bg-stone-950 px-4 sm:px-56 pb-16">
       <div className="rounded-lg isolate bg-white p-8">
-        <form method='post' className="mx-auto max-w-xl" onSubmit={handleOnSubmit}>
+        <form method="post" className="mx-auto max-w-xl" onSubmit={handleOnSubmit}>
           <div className="sm:col-span-2">
             <div>
               <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-900">
@@ -94,6 +109,7 @@ const ContactForm = () => {
           <div className="mt-10">
             <button
               type="submit"
+              name="submit"
               className="block w-full rounded-md bg-yellow-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
             >
               Let&apos;s talk
