@@ -1,50 +1,34 @@
 import Image from 'next/image'
 import CTA from '@/components/CTA'
 
-import Service from '../assets/services.jpg'
 import Component from '../assets/torque-converter.jpg'
 import Hydraulic from '../assets/hydraulic-pump.jpg'
 import GTC from '../assets/gtc-services.jpg'
 
 const Services = () => {
     return (
-        <div>
-            <div style={{position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                <Image
-                    src={Service}
-                    alt='Heavy vehicle services'
-                    style={{ width: '100%', height: '350px', objectFit: 'cover', objectPosition: 'center'}}
-                    className=''
-                />
-                {/* Overlay */}
+        <main>
+            {/* Header */}
+            <header className="bg-stone-950 py-16 text-white text-center">
+                <h1 className="text-5xl py-10">View our portfolio</h1>
+                <div className="bg-yellow-500 h-0.5 mx-auto w-1/2"/>
+                <h2 className="text-xl py-10">Have a look at some of our work.</h2>
+            </header>
+
+            {/* Gradient */}
+            <div className="isolate bg-white">
                     <div
+                    className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+                    aria-hidden="true">
+                    <div
+                        className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
                         style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        width: '100%',
-                        height: '100%',
-                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                        zIndex: 0
-                        }}
-                    />
-                <div style={{
-                    position: 'absolute', 
-                    top: '50%', 
-                    left: '50%', 
-                    transform: 'translate(-50%, -50%)', 
-                    zIndex: 1,
-                    width: '100%',
-                    textAlign: 'left',
-                    color: 'white',
-                }}>
-                    <div className='py-16 text-white text-center'>
-                        <h1 className="text-5xl py-10">Transforming your equipment</h1>
-                        <div className="bg-yellow-500 h-0.5 mx-auto w-1/2"/>
-                        <h2 className="text-xl py-10">Expert Services for Reliable Equipment Performance.</h2>
+                        clipPath:
+                            'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                        }}/>
                     </div>
-                </div>
             </div>
+
             <div className='py-8'>
                 <div className='px-2 py-4 sm:flex justify-evenly items-center'>
                     <div> 
@@ -99,7 +83,7 @@ const Services = () => {
                 </div> 
             </div>
             <CTA />
-        </div>
+        </main>
     )
 }
 

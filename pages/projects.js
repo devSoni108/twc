@@ -1,3 +1,4 @@
+import CTA from "@/components/CTA";
 import Slick from "@/components/Slick";
 
 const Projects = () => {
@@ -25,6 +26,7 @@ const Projects = () => {
       </div>
 
       <Slick />
+      <CTA />
     </main>
   );
 };
