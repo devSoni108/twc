@@ -24,6 +24,8 @@ const Projects = () => {
             }}/>
         </div>
       </div>
+      
+      <div className="bg-stone-500 h-0.5 mx-auto"/>
 
       <Slick />
       <CTA />
