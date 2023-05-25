@@ -10,9 +10,9 @@ const Services = () => {
         <main>
             {/* Header */}
             <header className="bg-stone-950 py-16 text-white text-center">
-                <h1 className="text-5xl py-10">View our portfolio</h1>
+                <h1 className="text-5xl py-10">Our Services</h1>
                 <div className="bg-yellow-500 h-0.5 mx-auto w-1/2"/>
-                <h2 className="text-xl py-10">Have a look at some of our work.</h2>
+                <h2 className="text-xl py-10">We offer a wide range of Drivetrain and Hydraulic pump and motor services.</h2>
             </header>
 
             {/* Gradient */}
