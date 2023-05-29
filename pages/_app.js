@@ -9,7 +9,7 @@ function App({ Component, pageProps }) {
   const router = useRouter();
 
   return (
-    <main>   
+    <main> 
       <AnimatePresence mode='wait'>
         <motion.div
           key={router.route}
