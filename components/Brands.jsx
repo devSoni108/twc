@@ -5,7 +5,6 @@ import CAT from '../assets/CAT.png';
 import Bell from '../assets/bell.png';
 import Hitachi from '../assets/hitachi.png';
 import Komatsu from '../assets/Komatsu.png';
-import Brand from '../assets/brands.jpg';
 
 const Brands = () => {
   const router = useRouter();
@@ -21,7 +20,7 @@ const Brands = () => {
           right: 0,
           bottom: 0,
           zIndex: -1,
-          backgroundImage: `url(${router.basePath}${Brand.src})`,
+          backgroundImage: `url(https://firebasestorage.googleapis.com/v0/b/gtc-africa.appspot.com/o/brands.jpg?alt=media&token=368691ec-bb7f-483d-896f-029bb9d21de4)`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundAttachment: 'fixed',

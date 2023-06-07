@@ -1,10 +1,6 @@
 import Image from 'next/image'
 import CTA from '@/components/CTA'
 
-import Component from '../assets/torque-converter.jpg'
-import Hydraulic from '../assets/hydraulic-pump.jpg'
-import GTC from '../assets/gtc-services.jpg'
-
 const Services = () => {
     return (
         <main>
@@ -33,9 +29,12 @@ const Services = () => {
                 <div className='px-2 py-4 sm:flex justify-evenly items-center'>
                     <div> 
                         <Image
-                            src={Hydraulic}
+                            src="https://firebasestorage.googleapis.com/v0/b/gtc-africa.appspot.com/o/hydraulic-pump.jpg?alt=media&token=aabc5223-1b24-4ac6-9dfc-a71fc5913428"
+                            width={1920}
+                            height={1200}
                             alt='Hydraulic pumps for earth movers'
                             className='rounded-sm pb-2 sm:max-w-500'
+                            loading="lazy"
                         />
                     </div>
                     <div className='max-w-500'>
@@ -50,18 +49,24 @@ const Services = () => {
                     </div>
                     <div>
                         <Image
-                            src={Component}
+                            src="https://firebasestorage.googleapis.com/v0/b/gtc-africa.appspot.com/o/torque-converter.jpg?alt=media&token=8d0cbb31-646c-4800-b380-fee957992d4d"
+                            width={1920}
+                            height={1200}
                             alt='Drivetrain component torque converter'
                             className='rounded-sm pb-2 sm:max-w-500'
+                            loading='lazy'
                         />
                     </div>
                 </div>
                 <div className='px-2 py-4 sm:flex justify-evenly items-center'>
                     <div>
                         <Image
-                            src={GTC}
+                            src="https://firebasestorage.googleapis.com/v0/b/gtc-africa.appspot.com/o/gtc-services.jpg?alt=media&token=9213297e-92f7-4f98-92e9-4bc8220c0466"
+                            width={1920}
+                            height={1200}
                             alt='Drivetrain component torque converter'
                             className='rounded-sm pb-2 sm:max-w-500'
+                            loading='lazy'
                         />
                     </div>
                     <div className='max-w-500'>

@@ -1,16 +1,36 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Header from '../assets/hero.jpg';
 
 const Hero = () => {
+  const [videoError, setVideoError] = useState(false);
+
+  const handleVideoError = () => {
+    setVideoError(true);
+  };
+
   return (
     <section>
-      <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <Image
-          src={Header}
-          alt='Heavy vehicle excavators'
-          style={{ width: '100%', height: '450px', objectFit: 'cover', objectPosition: 'center' }}
-        />
+      <div style={{ position: 'relative', display: 'flex', background: '#000000', justifyContent: 'center', alignItems: 'center' }}>
+        {videoError ? (
+          <Image
+            src='https://firebasestorage.googleapis.com/v0/b/gtc-africa.appspot.com/o/hero.jpg?alt=media&token=67c05447-4a72-4a1e-8e15-540fffafdbce'
+            alt='Heavy vehicle excavators'
+            width={1920}
+            height={450}
+            style={{ width: '100%', height: '450px', objectFit: 'cover', objectPosition: 'center' }}
+            loading="lazy"
+          />
+        ) : (
+          <video
+            src='https://firebasestorage.googleapis.com/v0/b/gtc-africa.appspot.com/o/hero.mp4?alt=media&token=35b2a9c4-026c-4435-a605-50d5cc21822a'
+            loop
+            autoPlay
+            muted
+            style={{ width: '100%', height: '450px', objectFit: 'cover', objectPosition: 'center' }}
+            onError={handleVideoError}
+          />
+        )}
         {/* Overlay */}
         <div
           style={{

@@ -1,8 +1,5 @@
 import Image from 'next/image'
 
-import Construction from '../assets/construction.jpg'
-import Mining from '../assets/mining.jpg'
-
 const Industries = () => {
     return (
         <div className='px-4 py-4 sm:p-8' id='industries'>
@@ -14,9 +11,12 @@ const Industries = () => {
                 <div className='px-2 py-4 sm:flex justify-evenly items-center'>
                     <div>
                         <Image
-                            src={Mining}
+                            src='https://firebasestorage.googleapis.com/v0/b/gtc-africa.appspot.com/o/mining.jpg?alt=media&token=ff9a9cf3-ec4d-4ea6-b5a6-2426844cc22f'
                             alt='Mining and earth movers'
+                            width={1920}
+                            height={1200}
                             className='rounded-sm pb-2 sm:max-w-500'
+                            loading="lazy"
                         />
                     </div>
                     <div className='max-w-500'>
@@ -33,9 +33,12 @@ const Industries = () => {
                     </div>
                     <div>
                         <Image
-                            src={Construction}
+                            src='https://firebasestorage.googleapis.com/v0/b/gtc-africa.appspot.com/o/construction.jpg?alt=media&token=048cd72c-34a5-4fc0-b72e-c095ac2b45be'
+                            width={1920}
+                            height={1200}
                             alt='Construction team'
                             className='rounded-sm pb-2 sm:max-w-500'
+                            loading="lazy"
                         />
                     </div>
                 </div>  
