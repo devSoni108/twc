@@ -36,8 +36,8 @@ const Footer = () => {
                 <div className='sm:flex justify-between items-center py-2 pt-4 text-xs sm:text-sm'>
                     <span className='text-left'>GTC Africa 2023: All rights reserved</span>
                     <div className='flex items-center'>
-                        <span>Follow us: </span>
-                        <FaFacebook className='px-1 text-xl sm:text-2xl'/>
+                        {/* <span>Follow us: </span>
+                        <FaFacebook className='px-1 text-xl sm:text-2xl'/> */}
                     </div>
                 </div>
             </div>
