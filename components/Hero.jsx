@@ -11,7 +11,7 @@ const Hero = () => {
 
   return (
     <section>
-      <div style={{ position: 'relative', display: 'flex', background: '#000000', justifyContent: 'center', alignItems: 'center' }}>
+      <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         {videoError ? (
           <Image
             src='https://firebasestorage.googleapis.com/v0/b/gtc-africa.appspot.com/o/hero.jpg?alt=media&token=67c05447-4a72-4a1e-8e15-540fffafdbce'
@@ -23,7 +23,7 @@ const Hero = () => {
           />
         ) : (
           <video
-            src='https://firebasestorage.googleapis.com/v0/b/gtc-africa.appspot.com/o/hero.mp4?alt=media&token=35b2a9c4-026c-4435-a605-50d5cc21822a'
+            src='https://firebasestorage.googleapis.com/v0/b/gtc-africa.appspot.com/o/hero.mp4?alt=media&token=585662bc-41e3-4d46-9cf5-23cacc460cb1'
             loop
             autoPlay
             muted
