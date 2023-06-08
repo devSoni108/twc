@@ -1,6 +1,5 @@
-import { GiSouthAfrica } from 'react-icons/gi';
+import { GiSouthAfrica, GiMineTruck } from 'react-icons/gi';
 import { AiFillSafetyCertificate } from 'react-icons/ai';
-import { FaTools } from 'react-icons/fa';
 
 
 const Brag = () => {
@@ -21,7 +20,7 @@ const Brag = () => {
                 <span className="text-xs uppercase text-stone-300">Certified parts intaller</span>
             </div>
             <div className="p-2">
-                <FaTools className='py-2' size={42} />
+                <GiMineTruck className='py-2' size={62} />
                 <h3 className="sm:text-2xl">Multi Industry</h3>
                 <span className="text-xs uppercase text-stone-300">Servicing all industries</span>
             </div>

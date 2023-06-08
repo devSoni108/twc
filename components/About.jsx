@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { FaFlag, FaTools, FaTruck } from 'react-icons/fa'
+import { FaTools, FaTruck } from 'react-icons/fa'
+import { GiSouthAfricaFlag } from 'react-icons/gi'
 
 import logo from '../assets/logo.jpg'
 
@@ -8,7 +9,7 @@ const About = () => {
         <div className='sm:flex justify-center items-center p-4 sm:p-8' id='about'>
             <div>
                 <div className='flex items-center max-w-500 py-4'>
-                    <FaFlag className='text-6xl p-2'/>
+                    <GiSouthAfricaFlag className='text-6xl p-2'/>
                     <div className='block px-4'>
                         <h4 className='font-semibold'>National Supplier</h4>
                         <p className='text-sm'>We take great pride in providing services to clients across Southern Africa.</p>
