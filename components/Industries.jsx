@@ -21,7 +21,9 @@ const Industries = () => {
                     </div>
                     <div className='max-w-500'>
                         <h4 className='font-semibold pb-1'>Mining Equipment</h4>
-                        <p className='text-stone-700 text-sm'>We prioritize fast and reliable turnaround times to ensure our clients can get back to their work as quickly as possible. Whether you need a drivetrain component repaired or a hydraulic pump rebuilt, you can count on us to provide high-quality workmanship and exceptional customer service every step of the way.</p>
+                        <p className='text-stone-700 text-sm'>We prioritize fast and reliable turnaround times to minimize downtime for our clients. Whether you need a drivetrain component repaired or a hydraulic pump rebuilt, we ensure efficient and timely solutions. Our skilled technicians deliver high-quality workmanship and attention to detail, ensuring precision in every repair or rebuild.
+                        <br/><br/>
+                        Exceptional customer service is at the core of our approach. We strive to exceed expectations by maintaining open communication throughout the process. Our friendly and knowledgeable staff is always available to address your concerns and provide assistance. Choose us for top-notch workmanship and a customer-centric experience that prioritizes your satisfaction.</p>
                     </div>
                     
                 </div>
@@ -29,7 +31,9 @@ const Industries = () => {
                 <div className='px-2 py-4 sm:flex justify-evenly items-center'>
                     <div className='max-w-500'>
                         <h4 className='font-semibold pb-1'>Construction Equipment</h4>
-                        <p className='text-stone-700 text-sm'>Our technicians are well-trained and have the expertise to provide professional repairs and complete drivetrain rebuilds for all types of construction equipment. Whether you need a simple repair or a complete overhaul, we have the knowledge and expertise to get the job done right the first time.</p>
+                        <p className='text-stone-700 text-sm'>Our technicians are highly skilled and well-trained in providing professional repairs and drivetrain rebuilds for various construction equipment. With their expertise and experience, we ensure that your equipment receives the utmost care and attention it deserves. From diagnosing and fixing simple repairs to undertaking complete overhauls, our technicians are equipped to handle any challenge that comes their way.
+                        <br/><br/>
+                        When you entrust your construction equipment to us, you can have confidence in our ability to deliver exceptional results. We take pride in our commitment to getting the job done right the first time, saving you time and minimizing downtime. Whether it's a drivetrain component repair or a comprehensive rebuild of your hydraulic pump, we strive to exceed your expectations with high-quality workmanship and a customer-centric approach. Your satisfaction is our top priority, and we go the extra mile to ensure that your equipment operates at its best performance.</p>
                     </div>
                     <div>
                         <Image
