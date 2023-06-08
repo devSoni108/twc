@@ -15,7 +15,7 @@ const Industries = () => {
                             alt='Mining and earth movers'
                             width={1920}
                             height={1200}
-                            className='rounded-sm pb-2 sm:max-w-500'
+                            className='rounded-sm py-2 sm:max-w-500'
                             loading="lazy"
                         />
                     </div>
@@ -41,7 +41,7 @@ const Industries = () => {
                             width={1920}
                             height={1200}
                             alt='Construction team'
-                            className='rounded-sm pb-2 sm:max-w-500'
+                            className='rounded-sm py-2 sm:max-w-500'
                             loading="lazy"
                         />
                     </div>
