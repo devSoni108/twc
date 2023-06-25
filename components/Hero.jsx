@@ -14,6 +14,7 @@ const LaunchingSoon = () => {
         {videoError ? (
           <Image
             src="https://firebasestorage.googleapis.com/v0/b/greanleaf-club.appspot.com/o/33.jpg?alt=media&token=2f32c129-68eb-49fd-be7f-9fca1508af0a"
+            alt='green leaf'
             layout="fill"
             objectFit="cover"
             objectPosition="center"
@@ -39,7 +40,7 @@ const LaunchingSoon = () => {
             </span>
           </h2>
           <div className="p-4">
-            <p>We're working on an awesome online experience!<br/>Sign up for exclusive offers and early bird access on launch.</p>
+            <p>We&apos;re working on an awesome online experience!<br/>Sign up for exclusive offers and early bird access on launch.</p>
           </div>
           
           {/* Form */}
