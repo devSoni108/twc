@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
 
-const Hero = () => {
+const LaunchingSoon = () => {
   const [videoError, setVideoError] = useState(false);
 
   const handleVideoError = () => {
@@ -10,71 +9,71 @@ const Hero = () => {
   };
 
   return (
-    <section>
-      <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <main>
+      <div className="relative h-screen">
         {videoError ? (
           <Image
-            src='https://firebasestorage.googleapis.com/v0/b/gtc-africa.appspot.com/o/hero.jpg?alt=media&token=67c05447-4a72-4a1e-8e15-540fffafdbce'
-            alt='Heavy vehicle excavators'
-            width={1920}
-            height={450}
-            style={{ width: '100%', height: '450px', objectFit: 'cover', objectPosition: 'center' }}
-            loading="lazy"
+            src="https://firebasestorage.googleapis.com/v0/b/greanleaf-club.appspot.com/o/33.jpg?alt=media&token=2f32c129-68eb-49fd-be7f-9fca1508af0a"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
           />
         ) : (
           <video
-            src='https://firebasestorage.googleapis.com/v0/b/gtc-africa.appspot.com/o/hero.mp4?alt=media&token=585662bc-41e3-4d46-9cf5-23cacc460cb1'
+            src="https://firebasestorage.googleapis.com/v0/b/greanleaf-club.appspot.com/o/twc-coming-soon.mp4?alt=media&token=b74cd1bd-d241-494d-858b-c0d62221f9f7"
             loop
             autoPlay
             muted
-            style={{ width: '100%', height: '450px', objectFit: 'cover', objectPosition: 'center' }}
+            className="absolute inset-0 object-cover object-center"
+            style={{ width: '100%', height: '100%' }}
             onError={handleVideoError}
           />
         )}
-        {/* Overlay */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'rgba(0, 0, 0, 0.6)',
-            zIndex: 0
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            zIndex: 1,
-            width: '100%',
-            textAlign: 'left',
-            color: 'white',
-          }}
-        >
-          <div className='px-4 sm:px-8'>
-            <h1 className='pt-4 text-4xl font-semibold md:text-5xl max-w-500'>Unleashing the <span className='text-yellow-500'>Power</span> of your Machinery</h1>
-            <h2 className='py-6 text-sm md:text-xl  sm:max-w-600 '>Experience the full potential of your earth moving equipment with our engineering and mechanical services.</h2>
-            <div className='block sm:flex'>
-              <div className='pr-2 pt-2'>
-                <Link href='/services' passHref>
-                  <button className='px-2 py-1 text-xs text-stone-950 bg-amber-300 font-semibold rounded border border-amber-200 hover:text-amber-300 hover:bg-stone-800 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-stone-800 focus:ring-offset-2 uppercase md:px-4 md:py-2'>Our Solutions</button>
-                </Link>
-              </div>
-              <div className='pt-2'>
-                <Link href='/contact' passHref>
-                  <button className='px-3 py-1 text-xs text-stone-950 bg-white font-semibold rounded border border-stone-400 hover:text-white hover:bg-stone-800 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-stone-800 focus:ring-offset-2 uppercase md:px-4 md:py-2'>Contact Us</button>
-                </Link>
-              </div>
-            </div>
+        <div className="absolute inset-0 bg-black opacity-50"/>
+
+        {/* Text */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white font-sans text-center">
+          <h2 className="text-6xl font-mono p-4">
+            <span style={{ backgroundImage: 'linear-gradient(135deg, #8c52ff 10%, #5ce1e6 90%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              Coming Soon
+            </span>
+          </h2>
+          <div className="p-4">
+            <p>We're working on an awesome online experience!<br/>Sign up for exclusive offers and early bird access on launch.</p>
           </div>
+          
+          {/* Form */}
+          <div className="max-w-370 isolate p-4">
+            <form name='contact' method="post" data-netlify='true' className="mx-auto">
+              <input type="hidden" name="form-name" value="contact" />
+              <div className="flex justify-center items-center">
+                <div>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    autoComplete="email"
+                    placeholder="Please enter your email address"
+                    className="block w-52 bg-gray-900 px-4 py-1 text-gray-100 placeholder-gray-600 shadow-sm rounded-l-md text-xs"
+                  />
+                </div>
+                <div>
+                  <button
+                    type="submit"
+                    name="submit"
+                    className="block rounded-r-md bg-gray-100 px-1 py-1 text-center text-xs text-gray-900 shadow-sm"
+                  >
+                    Notify Me
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 
-export default Hero;
+export default LaunchingSoon;

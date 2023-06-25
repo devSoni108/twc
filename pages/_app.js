@@ -1,6 +1,4 @@
 import '@/styles/globals.css'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router'
@@ -29,9 +27,7 @@ function App({ Component, pageProps }) {
             exitState: {
             },
           }}>
-          <Navbar />
           <Component {...pageProps} />
-          <Footer />
         </motion.div>
       </AnimatePresence>
     </main>
