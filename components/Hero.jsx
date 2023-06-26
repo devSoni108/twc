@@ -10,7 +10,7 @@ const LaunchingSoon = () => {
 
   return (
     <main>
-      <div className="relative h-screen">
+      <div className="relative h-screen bg-gray-900">
         {videoError ? (
           <Image
             src="https://firebasestorage.googleapis.com/v0/b/greanleaf-club.appspot.com/o/33.jpg?alt=media&token=2f32c129-68eb-49fd-be7f-9fca1508af0a"
@@ -56,14 +56,14 @@ const LaunchingSoon = () => {
                     id="email"
                     autoComplete="email"
                     placeholder="Please enter your email address"
-                    className="block w-52 bg-gray-900 px-4 py-1 text-gray-100 placeholder-gray-400 shadow-sm rounded-l-md text-xs border-2 border-gray-400"
+                    className="block w-52 bg-gray-900 px-4 py-1 text-gray-200 placeholder-gray-400 shadow-sm rounded-l-md text-xs border-t-2 border-l-2 border-b-2 border-gray-800"
                   />
                 </div>
                 <div>
                   <button
                     type="submit"
                     name="submit"
-                    className="block rounded-r-md bg-gray-900 px-1 py-1 text-xs text-gray-200 border-2 border-gray-400 font-bold"
+                    className="block rounded-r-md bg-gray-900 px-1 py-1 text-xs text-gray-200 border-t-2 border-r-2 border-b-2 border-gray-800 font-bold"
                   >
                     Notify Me
                   </button>
