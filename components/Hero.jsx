@@ -36,7 +36,7 @@ const LaunchingSoon = () => {
         {/* Text */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white font-sans text-center">
           <h3 className="text-lg sm:text-2xl">Coming Soon</h3>
-          <h2 className="text-4xl sm:text-6xl p-4 font-bold">
+          <h2 className="text-4xl sm:text-6xl p-4 font-bold drop-shadow-md">
             <span style={{ backgroundImage: "linear-gradient(135deg, #8c52ff 10%, #5ce1e6 90%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
               Greenleaf Club
             </span>
@@ -56,14 +56,14 @@ const LaunchingSoon = () => {
                     id="email"
                     autoComplete="email"
                     placeholder="Please enter your email address"
-                    className="block w-52 bg-gray-900 px-4 py-1 text-gray-100 placeholder-gray-600 shadow-sm rounded-l-md text-xs"
+                    className="block w-52 bg-gray-900 px-4 py-1 text-gray-100 placeholder-gray-400 shadow-sm rounded-l-md text-xs border-2 border-gray-400"
                   />
                 </div>
                 <div>
                   <button
                     type="submit"
                     name="submit"
-                    className="block rounded-r-md bg-gray-100 px-1 py-1 text-center text-xs text-gray-900 shadow-sm"
+                    className="block rounded-r-md bg-gray-900 px-1 py-1 text-xs text-gray-200 border-2 border-gray-400 font-bold"
                   >
                     Notify Me
                   </button>
