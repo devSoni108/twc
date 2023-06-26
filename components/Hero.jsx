@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import Image from "next/image";
 
 const LaunchingSoon = () => {
@@ -22,30 +22,31 @@ const LaunchingSoon = () => {
         ) : (
           <video
             src="https://firebasestorage.googleapis.com/v0/b/greanleaf-club.appspot.com/o/twc-coming-soon.mp4?alt=media&token=b74cd1bd-d241-494d-858b-c0d62221f9f7"
+            alt="cannabis club"
             loop
             autoPlay
             muted
             className="absolute inset-0 object-cover object-center"
-            style={{ width: '100%', height: '100%' }}
+            style={{ width: "100%", height: "100%" }}
             onError={handleVideoError}
           />
         )}
-        <div className="absolute inset-0 bg-black opacity-50"/>
+        <div className="absolute inset-0 bg-black opacity-60"/>
 
         {/* Text */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white font-sans text-center">
-          <h2 className="text-6xl font-mono p-4">
-            <span style={{ backgroundImage: 'linear-gradient(135deg, #8c52ff 10%, #5ce1e6 90%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              Coming Soon
+          <h3 className="text-lg sm:text-2xl">Coming Soon</h3>
+          <h2 className="text-4xl sm:text-6xl p-4 font-bold">
+            <span style={{ backgroundImage: "linear-gradient(135deg, #8c52ff 10%, #5ce1e6 90%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+              Greenleaf Club
             </span>
           </h2>
           <div className="p-4">
-            <p>We&apos;re working on an awesome online experience!<br/>Sign up for exclusive offers and early bird access on launch.</p>
+            <p className="text-xs sm:text-sm">We&apos;re working on an awesome online experience!<br/>Sign up for exclusive offers and early bird access on launch.</p>
           </div>
           
           {/* Form */}
-          <div className="max-w-370 isolate p-4">
-            <form name='contact' method="post" data-netlify='true' className="mx-auto">
+            <form name="contact" method="post" data-netlify="true" className="max-w-370 isolate p-4">
               <input type="hidden" name="form-name" value="contact" />
               <div className="flex justify-center items-center">
                 <div>
@@ -69,7 +70,6 @@ const LaunchingSoon = () => {
                 </div>
               </div>
             </form>
-          </div>
 
         </div>
       </div>
