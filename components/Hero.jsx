@@ -56,6 +56,7 @@ const LaunchingSoon = () => {
                     id="email"
                     autoComplete="email"
                     placeholder="Please enter your email address"
+                    required="true"
                     className="block w-52 bg-gray-900 px-4 py-1 text-gray-200 placeholder-gray-400 shadow-sm rounded-l-md text-xs border-t-2 border-l-2 border-b-2 border-gray-800"
                   />
                 </div>
