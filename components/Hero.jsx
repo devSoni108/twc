@@ -38,7 +38,7 @@ const LaunchingSoon = () => {
           <h3 className="text-lg sm:text-2xl">Coming Soon</h3>
           <h2 className="text-4xl sm:text-6xl p-4 font-bold drop-shadow-md">
             <span style={{ backgroundImage: "linear-gradient(135deg, #8c52ff 10%, #5ce1e6 90%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              Greenleaf Club
+              Weed Club
             </span>
           </h2>
           <div className="p-4">
